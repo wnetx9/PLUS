@@ -1489,7 +1489,7 @@ exit 0' >$RCLOCAL
 		}
 		[[ $(screen -list | grep -wc 'proxy') != '0' ]] && var_sks1="\033[1;32m◉" || var_sks1="\033[1;31m○"
 		[[ $(screen -list | grep -wc 'ws') != '0' ]] && var_sks2="\033[1;32m◉" || var_sks2="\033[1;31m○"
-		[[ $(screen -list | grep -wc 'ws2') != '0' ]] && var_sks3="\033[1;32m◉" || var_sks3="\033[1;31m○"
+		[[ $(screen -list | grep -wc 'novoWS') != '0' ]] && var_sks3="\033[1;32m◉" || var_sks3="\033[1;31m○"
 		[[ $(screen -list | grep -wc 'openpy') != '0' ]] && sksop="\033[1;32m◉" || sksop="\033[1;31m○"
 		echo ""
 		echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mSOCKS SSH $var_sks1 \033[0m"
@@ -1656,7 +1656,7 @@ elif [[ "$resposta" = '3' ]]; then
 			else
 		echo -e "\E[44;1;37m          WEBSOCKET SECURITY              \E[0m"
 				echo ""
-				echo "$(echo -e "\033[1;32mPORTA UTILIZADA 8080 \033[1;37m")"
+				echo "$(echo -e "\033[1;32mPORTA UTILIZADA 80 \033[1;37m")"
 				[[ -z "porta" ]] && {
 					echo ""
 					echo -e "\033[1;31mPorta invalida!"
@@ -1668,10 +1668,10 @@ elif [[ "$resposta" = '3' ]]; then
 					sleep 1
 					screen -dmS novoWS /etc/SSHPlus/WebSocket 
 					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:80" >>/etc/autostart
 					} || {
 						sed -i '/WebSocket/d' /etc/autostart
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:80" >>/etc/autostart
 					}
 				}
 				echo ""
