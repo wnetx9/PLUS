@@ -38,6 +38,9 @@ case $x in
         chany  # Já instalado, executar o sistema chany
     else
         bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/checkany/main/install.sh) && chany
+ ;;
+5 | 05)
+    bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/CheckUser/master/install.sh)
     fi
     ;;
 0 | 00)
