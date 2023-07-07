@@ -38,13 +38,13 @@ case $x in
     if check_installed; then
         chany  # Já instalado, executar o sistema chany
     else
-        bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/checkany/main/install.sh) && chany
+    bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/checkany/main/install.sh) && chany
     ;;
 5 | 05)
     if check_installed; then
         Web  # Já instalado, executar o sistema Web
     else
-       bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/CheckWeb/main/install.sh) && Web
+    bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/CheckWeb/main/install.sh) && Web
     fi
     ;;
 0 | 00)
