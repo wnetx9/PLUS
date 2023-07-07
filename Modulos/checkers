@@ -41,9 +41,6 @@ case $x in
     bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/checkany/main/install.sh) && chany
     ;;
 5 | 05)
-    if check_installed; then
-        Web  # Já instalado, executar o sistema Web
-    else
     bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/CheckWeb/main/install.sh) && Web
     fi
     ;;
