@@ -40,8 +40,6 @@ case $x in
     else
     bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/checkany/main/install.sh) && chany
     ;;
-5 | 05)
-    bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/CheckWeb/main/install.sh) && Web
     fi
     ;;
 0 | 00)
