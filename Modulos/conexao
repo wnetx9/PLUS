@@ -8,7 +8,7 @@ scor='\033[0m'
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 SCOLOR='\033[0m'
-[[ $(awk -F" " '{print $2}' /usr/lib/licence) == '@TURBONET2023' ]] && {
+[[ $(awk -F" " '{print $2}' /usr/lib/licence) == '@KIRITO_SSH' ]] && {
 	ram1=$(free -h | grep -i mem | awk {'print $2'})
 	ram2=$(free -h | grep -i mem | awk {'print $4'})
 	ram3=$(free -h | grep -i mem | awk {'print $3'})
@@ -2158,12 +2158,6 @@ echo -e "\033[0;31m║\033[0m"
 				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mPROXY SOCKS \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"
 				sts4="\033[1;32m◉ "
 			} || {
-                                sts4="\033[1;31m○ 
-                        }
-                        [[ "$(netstat -tlpn | grep 'WebSocket' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;37m$(netstat -nplt | grep 'WebSocket' | awk {'print $4'} | cut -d: -f2 | xargs)"
-				sts4="\033[1;32m◉ "
-			} || {
 				sts4="\033[1;31m○ "
 			}
 			[[ -e "/etc/stunnel/stunnel.conf" ]] && {
@@ -2207,9 +2201,10 @@ echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 08 •\033[1;34m]\033[1;3
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 09 •\033[1;34m]\033[1;37m ➩  \033[1;33mSLOWDNS \033[01;31m $sts9\033[0m"
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 10 •\033[1;34m]\033[1;37m ➩  \033[1;33mV2RAY \033[01;31m $xv2ray\033[0m"
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 11 •\033[1;34m]\033[1;37m ➩  \033[1;33mTROJAN-GO \033[01;31m $trojansts\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 12 •\033[1;34m]\033[1;37m ➩  \033[1;33mLIMPAR V2RAY \033[01;31m\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 13 •\033[1;34m]\033[1;37m ➩  \033[1;33mMENU APACHE  \033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 14 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 12 •\033[1;34m]\033[1;37m ➩  \033[1;33mWEBSOCKET - Corretor \033[01;31m $sts3\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 13 •\033[1;34m]\033[1;37m ➩  \033[1;33mLIMPAR V2RAY \033[01;31m\033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 14 •\033[1;34m]\033[1;37m ➩  \033[1;33mMENU APACHE  \033[0m"
+echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 15 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
 echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;37m ➩  \033[1;33mSAIR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
 echo -e "\033[01;31m║\033[0m"
 			echo -e "\033[0;31m╠━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━═━\033[0m"
@@ -2254,6 +2249,9 @@ echo -e "\033[01;31m║\033[0m"
 			trojan-go
 			;;
 			12 | 12)
+			websocket.sh
+			;;
+			13 | 13)
 			echo -e "\E[44;1;37m             LIMPAR V2RAY              \E[0m"
 			echo -e "\033[1;31mESSA FUNÇÃO É PARA LIBERAR MEMÓRIA EM DISCO COMO MEMÓRIA RAM \033[1;33m \033[1;32\033[0m"
 			echo -e "\033[1;31mTenha em mente que ao executá-lo, se você tivesse estatísticas de consumo, \033[1;33m \033[1;32\033[0m"
@@ -2261,11 +2259,11 @@ echo -e "\033[01;31m║\033[0m"
 			v2ray clean
 			echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
 			;;
-			13 | 13)
+			14 | 14)
 			clear
 			apache2menu
 			;;
-			14 | 14)
+			15 | 15)
 			clear
 			menu
 			;;
