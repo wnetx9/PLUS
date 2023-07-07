@@ -1,0 +1,6 @@
+#!/bin/bash
+clear
+echo -e "\033[1;33mINICIANDO, INSTALADOR \033[0m"
+sleep 2s
+apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ssh-plus)
+
