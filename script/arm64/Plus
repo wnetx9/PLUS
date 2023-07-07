@@ -76,7 +76,7 @@ otimize_python() {
     update-alternatives --set python3 /usr/bin/python3.6
 }
 figlet "SSH-PLUS" | lolcat
-echo "SCRIPT EM DESENVOLVIMENTO !!"
+echo "SCRIPT SSH PREMIUM !!"
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━\033[0m"
 echo ""
 echo ""
@@ -122,7 +122,7 @@ echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ; rm $_Ink/listARM >/dev/null 
     echo ""
     [[ -f "$HOME/usuarios.db" ]] && {
         clear
-        figlet "PULSE NET - SSH" | lolcat
+        figlet "SSH-PLUS" | lolcat
         echo "SCRIPT SSH PREMIUM" 
         echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━\033[0m"
         echo -e "\033[1;33mOPA DETECTAMOS..."
@@ -207,8 +207,8 @@ chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
 mkdir /etc/rec > /dev/null 2>&1
-echo -e 'By: @KIRITO_SSH' > /etc/rec/licence
-echo -e 'By: @KIRITO_SSH' > /usr/lib/licence
+echo -e 'By: @TURBONET2023' > /etc/rec/licence
+echo -e 'By: @TURBONET2023' > /usr/lib/licence
 mkdir /usr/lib/checkuser > /dev/null 2>&1
 cd /usr/lib/checkuser || exit
 rm checkuser.py > /dev/null 2>&1
@@ -223,7 +223,7 @@ chmod 777 checkuser.py > /dev/null 2>&1
     echo "clear" >>/root/.bashrc
     echo 'DATE=$(date +"%d-%m-%y")' >>/root/.bashrc
     echo 'TIME=$(date +"%T")' >>/root/.bashrc
-    echo 'figlet -k PULSE NET - SSH | lolcat' >>/root/.bashrc
+    echo 'figlet -k SSH-PLUS | lolcat' >>/root/.bashrc
     echo 'echo -e " NOME DO SERVIDOR : $HOSTNAME"' >>/root/.bashrc
     echo 'echo -e " SERVIDOR LIGADO À : $(uptime -p)"' >>/root/.bashrc
     echo 'echo -e " DATA : $DATE"' >>/root/.bashrc
