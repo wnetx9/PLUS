@@ -483,15 +483,15 @@ case "$x" in
    22)
    menu2
    ;;
-   c)
+   C | c)
    checkers
    ;;
-   b)
+   B | b)
    clear
    menub
    exit;
    ;;
-   v)
+   V | v)
    v2raymanager
    ;;
    *)
