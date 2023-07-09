@@ -2161,7 +2161,7 @@ echo -e "\033[0;31m║\033[0m"
 				sts4="\033[1;31m○ "
 			}
 			[[ "$(netstat -tlpn | grep 'WebSocket' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m80\033[01;31m                       \033[0m"
+				echo -e "\033[01;31m\033[1;32mSERVICO:  \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m$\033[01;31m                        \033[0m"
 				sts4="\033[1;32m◉ "
 			} || {
 				sts4="\033[1;31m○ "
