@@ -1637,11 +1637,11 @@ elif [[ "$resposta" = '3' ]]; then
 				echo ""
 				fun_wsswsocksoff() { 
 					pkill WebSocket
-					for pidproxy in $(screen -ls | grep ".ws" | awk {'print $1'}); do
-						screen -r -S "$WebSocket" -X quit
+					for pidproxy in $(screen -ls | grep ".novoWS" | awk {'print $1'}); do
+						screen -r -S "$pidproxy" -X quit
 					done
 					[[ $(grep -wc "wssecury.py" /etc/autostart) != '0' ]] && {
-						sed -i '/WebSocket/d' /etc/autostart
+						sed -i '/wssecury.py/d' /etc/autostart
 					}
 					sleep 1
 					screen -wipe >/dev/null
@@ -1669,10 +1669,10 @@ elif [[ "$resposta" = '3' ]]; then
 				fun_iniwssocks() {
 					sleep 1
 					screen -dmS novoWS /etc/SSHPlus/WebSocket $porta
-					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
+					[[ $(grep -wc "wssecury.py" /etc/autostart) = '0' ]] && {
 						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'novoWS' -X quit;  screen -dmS ws WebSocket /etc/SSHPlus/wssecury.py $porta; }" >>/etc/autostart
 					} || {
-						sed -i '/WebSocket/d' /etc/autostart
+						sed -i '/wssecury.py/d' /etc/autostart
 						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'novoWS' -X quit;  screen -dmS ws WebSocket /etc/SSHPlus/wssecury.py $porta; }" >>/etc/autostart
 					}
 				}
