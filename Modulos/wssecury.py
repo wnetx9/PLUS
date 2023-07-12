@@ -1,25 +1,23 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# WebSecurity by @sottssh
-import socket, threading, thread, select, signal, sys, time
-from os import system
-system("clear")
-#conexao
-IP = '0.0.0.0'
-try:
-   PORT = int(sys.argv[1])
-except:
-   PORT = 80
-PASS = ''
-BUFLEN = 8196 * 8
-TIMEOUT = 60
+# WebSocket @scottssh
+import socket, threading, thread, select, signal, sys, time, getopt
 MSG = 'WebSocket Security'
 COR = '<font color="null">'
 FTAG = '</font>'
 MSx = '@scottssh'
 COx = '<font color="#00FFFF">'
 FTAx = '</font>'
-DEFAULT_HOST = '0.0.0.0:22'
+
+PASS = ''
+LISTENING_ADDR = '0.0.0.0'
+try:
+   LISTENING_PORT = int(sys.argv[1])
+except:
+   LISTENING_PORT = 80
+BUFLEN = 8196 * 8
+TIMEOUT = 60
+DEFAULT_HOST = "127.0.0.1:22"
 RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + " - (" + str(COx) + str(MSx) + str(FTAx) + "\r\n\r\n"
  
 class Server(threading.Thread):
@@ -95,7 +93,7 @@ class ConnectionHandler(threading.Thread):
         self.client = socClient
         self.client_buffer = ''
         self.server = server
-        self.log = 'Conexao: ' + str(addr)
+        self.log = 'Connection: ' + str(addr)
 
     def close(self):
         try:
@@ -137,10 +135,10 @@ class ConnectionHandler(threading.Thread):
                     self.method_CONNECT(hostPort)
                 elif len(PASS) != 0 and passwd != PASS:
                     self.client.send('HTTP/1.1 400 WrongPass!\r\n\r\n')
-                if hostPort.startswith(IP):
+                elif hostPort.startswith('127.0.0.1') or hostPort.startswith('localhost'):
                     self.method_CONNECT(hostPort)
                 else:
-                   self.client.send('HTTP/1.1 403 Forbidden!\r\n\r\n')
+                    self.client.send('HTTP/1.1 403 Forbidden!\r\n\r\n')
             else:
                 print '- No X-Real-Host!'
                 self.client.send('HTTP/1.1 400 NoXRealHost!\r\n\r\n')
@@ -177,7 +175,7 @@ class ConnectionHandler(threading.Thread):
             if self.method=='CONNECT':
                 port = 443
             else:
-                port = 22
+                port = 80
 
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
 
@@ -186,13 +184,15 @@ class ConnectionHandler(threading.Thread):
         self.target.connect(address)
 
     def method_CONNECT(self, path):
-    	self.log += ' - CONNECT ' + path
+        self.log += ' - CONNECT ' + path
+        
         self.connect_target(path)
         self.client.sendall(RESPONSE)
         self.client_buffer = ''
+
         self.server.printLog(self.log)
         self.doCONNECT()
-                    
+
     def doCONNECT(self):
         socs = [self.client, self.target]
         count = 0
@@ -227,20 +227,49 @@ class ConnectionHandler(threading.Thread):
                 break
 
 
+def print_usage():
+    print 'Use: proxy.py -p <port>'
+    print '       proxy.py -b <ip> -p <porta>'
+    print '       proxy.py -b 0.0.0.0 -p 22'
 
-def main(host=IP, port=PORT):
+def parse_args(argv):
+    global LISTENING_ADDR
+    global LISTENING_PORT
+    
+    try:
+        opts, args = getopt.getopt(argv,"hb:p:",["bind=","port="])
+    except getopt.GetoptError:
+        print_usage()
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print_usage()
+            sys.exit()
+        elif opt in ("-b", "--bind"):
+            LISTENING_ADDR = arg
+        elif opt in ("-p", "--port"):
+            LISTENING_PORT = int(arg)
+    
+
+def main(host=LISTENING_ADDR, port=LISTENING_PORT):
+    
     print "\033[0;34m━"*8,"\033[1;32m WEBSOCKET SECURITY","\033[0;34m━"*8,"\n"
-    print "\033[1;33mIP:\033[1;32m " + IP
-    print "\033[1;33mPORTA:\033[1;32m " + str(PORT) + "\n"
-    print "\033[0;34m━"*10,"\033[1;32m SSHPLUS","\033[0;34m━\033[1;37m"*11,"\n"
-    server = Server(IP, PORT)
+    print "\033[1;33mIP:\033[1;32m " + LISTENING_ADDR
+    print "\033[1;33mPORTA:\033[1;32m " + str(LISTENING_PORT) + "\n"
+    print "\033[0;34m━"*10,"\033[1;32m SCOTT","\033[0;34m━\033[1;37m"*11,"\n"
+    
+    
+    server = Server(LISTENING_ADDR, LISTENING_PORT)
     server.start()
+
     while True:
         try:
             time.sleep(2)
         except KeyboardInterrupt:
-            print '\nParando...'
+            print 'Parando...'
             server.close()
             break
+    
 if __name__ == '__main__':
+    parse_args(sys.argv[1:])
     main()
