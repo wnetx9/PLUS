@@ -2163,7 +2163,7 @@ echo -e "\033[0;31m║\033[0m"
 				sts4="\033[1;31m○ "
 			}
 			        [[ "$(netstat -tlpn | grep 'WebSocket' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m8080(netstat -nplt | grep 'WebSocket' | awk {'print $4'} | cut -d: -f2 | xargs)"
+				echo -e "\033[01;31m\033[1;32mSERVICO:  \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m8080\033[01;31m                       \033[0m"
 				sts4="\033[1;32m◉ "
 			} || {
 				sts4="\033[1;31m○ "
