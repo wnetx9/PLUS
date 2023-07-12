@@ -1633,15 +1633,16 @@ exit 0' >$RCLOCAL
 elif [[ "$resposta" = '3' ]]; then
 		clear
 		if ps x | grep -w WebSocket | grep -v grep 1>/dev/null 2>/dev/null; then
-		echo -e "\E[41;1;37m          WEBSOCKET SECURITY              \E[0m"
+		figlet 'SSH-PLUS' | lolcat
+		echo -e "\E[41;1;37m       🚀   WEBSOCKET SECURITY   🚀           \E[0m"
 				echo ""
 				fun_wsswsocksoff() { 
 					pkill WebSocket
-					for pidproxy in $(screen -ls | grep ".novoWS" | awk {'print $1'}); do
-						screen -r -S "$pidproxy" -X quit
+					for pidproxy in $(screen -ls | grep ".ws" | awk {'print $1'}); do
+						screen -r -S "$WebSocket" -X quit
 					done
-					[[ $(grep -wc "wssecury.py" /etc/autostart) != '0' ]] && {
-						sed -i '/wssecury.py/d' /etc/autostart
+					[[ $(grep -wc "WebSocket" /etc/autostart) != '0' ]] && {
+						sed -i '/WebSocket/d' /etc/autostart
 					}
 					sleep 1
 					screen -wipe >/dev/null
@@ -1654,26 +1655,25 @@ elif [[ "$resposta" = '3' ]]; then
 				
 				fun_socks
 			else
-		echo -e "\E[44;1;37m          WEBSOCKET SECURITY              \E[0m"
+			figlet 'SSH-PLUS' | lolcat
+		echo -e "\E[44;1;37m       🚀   WEBSOCKET SECURITY   🚀           \E[0m"
 				echo ""
-				echo -ne "\033[1;32mQUAL PORTA DESEJA ULTILIZAR \033[1;33m?\033[1;37m: "
-				read porta
-				[[ -z "$porta" ]] && {
+				echo "$(echo -e "\033[1;32mPORTA UTILIZADA 8080 \033[1;37m")"
+				[[ -z "porta" ]] && {
 					echo ""
 					echo -e "\033[1;31mPorta invalida!"
-					sleep 3
-					clear
-					fun_conexao
+					
+				fun_socks
 				}
 				verif_ptrs $porta
 				fun_iniwssocks() {
 					sleep 1
-					screen -dmS novoWS /etc/SSHPlus/WebSocket $porta
-					[[ $(grep -wc "wssecury.py" /etc/autostart) = '0' ]] && {
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'novoWS' -X quit;  screen -dmS ws WebSocket /etc/SSHPlus/wssecury.py $porta; }" >>/etc/autostart
+					screen -dmS novoWS /etc/SSHPlus/WebSocket 
+					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080" >>/etc/autostart
 					} || {
-						sed -i '/wssecury.py/d' /etc/autostart
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'novoWS' -X quit;  screen -dmS ws WebSocket /etc/SSHPlus/wssecury.py $porta; }" >>/etc/autostart
+						sed -i '/WebSocket/d' /etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080" >>/etc/autostart
 					}
 				}
 				echo ""
@@ -2163,7 +2163,7 @@ echo -e "\033[0;31m║\033[0m"
 				sts4="\033[1;31m○ "
 			}
 			        [[ "$(netstat -tlpn | grep 'WebSocket' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"
+				echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'WebSocket' | awk {'print $4'} | cut -d: -f2 | xargs)"
 				sts4="\033[1;32m◉ "
 			} || {
 				sts4="\033[1;31m○ "
