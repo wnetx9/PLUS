@@ -1670,10 +1670,10 @@ elif [[ "$resposta" = '3' ]]; then
 					sleep 1
 					screen -dmS novoWS /etc/SSHPlus/WebSocket 
 					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080-msg=Websocket/Sercurity" >>/etc/autostart
 					} || {
 						sed -i '/WebSocket/d' /etc/autostart
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:8080-msg=Websocket/Sercurity" >>/etc/autostart
 					}
 				}
 				echo ""
