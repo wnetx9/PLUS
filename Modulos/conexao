@@ -1658,8 +1658,14 @@ elif [[ "$resposta" = '3' ]]; then
 			figlet 'SSH-PLUS' | lolcat
 		echo -e "\E[44;1;37m       🚀   WEBSOCKET SECURITY   🚀           \E[0m"
 				echo ""
-				echo "$(echo -e "\033[1;32mPORTA UTILIZADA 80 \033[1;37m")"
-				[[ -z "porta" ]] && {
+				rm -rf /etc/mamalista
+				read -p "$(echo -e "★ \033[1;32mQUAL PORTA ULTILIZAR? \033[1;37m")" -e -i 80 cuzin
+				echo "$cuzin" > /etc/mamalista
+				echo ""
+				read -p "$(echo -e "★ \033[1;32mQUAL MENSAGEM PARA STATUS? \033[1;37m")" -e -i WebSecurity cuzin2
+				rm -rf /etc/mamalista2
+				echo "$cuzin2" > /etc/mamalista2
+				[[ -z "cuzin" ]] && {
 					echo ""
 					echo -e "\033[1;31mPorta invalida!"
 					
@@ -1668,12 +1674,12 @@ elif [[ "$resposta" = '3' ]]; then
 				verif_ptrs $porta
 				fun_iniwssocks() {
 					sleep 1
-					screen -dmS novoWS /etc/SSHPlus/WebSocket 
+					screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg="$(cat /etc/mamalista2) - <span style="color:#bb1cf6">@</span><span style="color:#a438f1">s</span><span style="color:#8c54ed">c</span><span style="color:#7570e8">o</span><span style="color:#5d8ce3">t</span><span style="color:#46a8df">t</span><span style="color:#2ec4da">s</span><span style="color:#17e0d5">s</span><span style="color:#00fdd1">h</span>"
 					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:80-msg=Websocket/Sercurity" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2) - <span style="color:#bb1cf6">@</span><span style="color:#a438f1">s</span><span style="color:#8c54ed">c</span><span style="color:#7570e8">o</span><span style="color:#5d8ce3">t</span><span style="color:#46a8df">t</span><span style="color:#2ec4da">s</span><span style="color:#17e0d5">s</span><span style="color:#00fdd1">h</span>'" >>/etc/autostart
 					} || {
 						sed -i '/WebSocket/d' /etc/autostart
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:80-msg=Websocket/Sercurity" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2) - <span style="color:#bb1cf6">@</span><span style="color:#a438f1">s</span><span style="color:#8c54ed">c</span><span style="color:#7570e8">o</span><span style="color:#5d8ce3">t</span><span style="color:#46a8df">t</span><span style="color:#2ec4da">s</span><span style="color:#17e0d5">s</span><span style="color:#00fdd1">h</span>'" >>/etc/autostart
 					}
 				}
 				echo ""
@@ -2128,7 +2134,7 @@ elif [[ "$resposta" = '3' ]]; then
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                $date"
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                      CONEXAO                      \033[1;33m \033[0m\033[01;31m║"
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                     💎 CONEXAO 💎                      \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[0;31m║\033[0m"
 			echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mOPENSSH \033[1;32mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="\033[1;32m◉ "
 			[[ "$(netstat -tlpn | grep 'docker' | wc -l)" != '0' ]] && {
@@ -2163,7 +2169,7 @@ echo -e "\033[0;31m║\033[0m"
 				sts4="\033[1;31m○ "
 			}
 			        [[ "$(netstat -tlpn | grep 'WebSocket' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m\033 [1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m80\033[01;31m                       \033[0m"
+				echo -e "\033[01;31m\033[1;32mSERVICO: \033[1;33mWEBSOCKET SECURITY \033[1;32mPORTA: \033[1;37m"$(cat /etc/mamalista)"\033[01;31m                       \033[0m"
 				sts4="\033[1;32m◉ "
 			} || {
 				sts4="\033[1;31m○ "
