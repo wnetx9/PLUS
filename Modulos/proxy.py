@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# SSHPLUS By @Crazy_vpn
+# WebSecurity by @sottssh
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
@@ -13,11 +13,14 @@ except:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
-MSG = 'SSHPLUS'
+MSG = 'WebSocket'
 COR = '<font color="null">'
 FTAG = '</font>'
+MSx = '@scottssh'
+COx = '<font color="#00FFFF">'
+FTAx = '</font>'
 DEFAULT_HOST = '0.0.0.0:22'
-RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
+RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + " - (" + str(COx) + str(MSx) + str(FTAx) + "\r\n\r\n"
  
 class Server(threading.Thread):
     def __init__(self, host, port):
