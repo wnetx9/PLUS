@@ -484,6 +484,12 @@ case "$x" in
    22)
    menu2
    ;;
+   99)
+   echo -e "\033[1;31mSaindo...\033[0m"
+   sleep 2
+   clear
+   exit;
+   ;;
    C | c)
    checkers
    ;;
