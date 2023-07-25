@@ -483,7 +483,6 @@ case "$x" in
    22)
    menu2
    ;;
-   99)
    C | c)
    checkers
    ;;
