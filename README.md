@@ -46,14 +46,14 @@ apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubuserconte
 
 # OPÇÃO 2
 ```
-apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/script/arm64/ssh-plus ; chmod +x Plus ; ./Plus
+apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/script/arm64/ssh-plus)
 
 ```
 
 # Instalar Direto e Máquinas 64!
 
 ````
-apt update -y && apt upgrade -y && wget -y; bash <(wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/script/arm64/ssh-plus ; chmod +x Plus ; ./Plus
+apt update -y && apt upgrade -y && wget -y; bash <(wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/script/arm64/Plus)
 ````
 
 
