@@ -53,7 +53,7 @@ apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubuserconte
 # Instalar Direto e Máquinas 64!
 
 ````
-apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ARM/Plus && chmod 777 ssh-plus && ./Plus
+apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ARM/Plus && chmod 777 Plus && ./Plus
 ````
 
 
