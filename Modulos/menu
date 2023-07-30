@@ -492,7 +492,7 @@ case "$x" in
    exit;
    ;;
    V | v)
-   v2raymanager
+   apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/PhoenixxZ2023/XRAY/main/xray && chmod +x xray && ./xray
    ;;
    *)
    echo -e "\n\033[1;31mOpcao invalida !\033[0m"
