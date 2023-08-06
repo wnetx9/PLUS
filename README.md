@@ -1,4 +1,4 @@
-# W NET ⚡
+# W NET⚡
 
 
 # TELEGRAM @WNET
@@ -35,7 +35,7 @@
 * Recomenda-se usar uma distro nova ou formatada
 * O idioma padrão é o Português
 
-# W NET 2023 INSTALAÇÃO
+# SSH PLUS 2023 INSTALAÇÃO
 
 # Como Instalar!
 
