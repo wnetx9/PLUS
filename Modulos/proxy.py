@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# WebSecurity by @wnet
+# WebSecurity by @scottssh
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
@@ -16,7 +16,7 @@ TIMEOUT = 60
 MSG = 'WebSocket'
 COR = '<font color="null">'
 FTAG = '</font>'
-MSx = '@wnet'
+MSx = '@scottssh'
 COx = '<font color="#00FFFF">'
 FTAx = '</font>'
 DEFAULT_HOST = '0.0.0.0:22'
