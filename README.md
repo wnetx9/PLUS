@@ -1,9 +1,9 @@
 # SSH-PLUS ⚡
 
 
-# TELEGRAM @W NET
+# TELEGRAM @WNET
 
-✅ NOVO DTUNNELPROXY -- TOKEN PARA UTILIZAR  @LightXVD
+✅ NOVO DTUNNELPROXY -- TOKEN PARA UTILIZAR  @WNET
 
 ✅ WEBSOCKET SECURITY
 
@@ -53,7 +53,7 @@ apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubuserconte
 # Instalar Direto e Máquinas 64!
 
 ````
-apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ARM/Plus && chmod 777 Plus && ./Plus
+apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/ARM/Plus && chmod 777 Plus && ./Plus
 ````
 
 

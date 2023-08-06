@@ -81,7 +81,7 @@ otimize_python() {
     update-alternatives --set python3 /usr/bin/python3.6
 }
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "BEM VINDO AO SSHPLUS MANAGER" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "BEM VINDO AO W NET" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
 echo -e "             \033[1;31mATENCAO! \033[1;33mESSE SCRIPT IRA !\033[0m"
@@ -109,22 +109,22 @@ if [[ "$resposta" = '1' ]]; then
     mkdir /etc/rec >/dev/null 2>&1
     echo -e "\n\033[1;36mVERIFICANDO... \033[1;37m 16983:16085\033[0m"
     rm $_Ink/list >/dev/null 2>&1
-    wget -P $_Ink https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Install/list >/dev/null 2>&1
+    wget -P $_Ink https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Install/list >/dev/null 2>&1
     verif_key
     sleep 3s
     echo "/bin/menu" >/bin/h && chmod +x /bin/h >/dev/null 2>&1
     rm versao* >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Install/versao >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Install/versao >/dev/null 2>&1
     >/dev/null 2>&1
     cd /bin/ >/dev/null 2>&1
     rm v2raymanager >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Modulos/v2raymanager >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Modulos/botteste.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/v2raymanager >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/botteste.sh >/dev/null 2>&1
     chmod 777 v2raymanager >/dev/null 2>&1
     chmod 777 botteste.sh >/dev/null 2>&1
     mkdir $HOME/BOT >/dev/null 2>&1
     cd $HOME/BOT
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Sistema/ShellBot.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Sistema/ShellBot.sh >/dev/null 2>&1
     chmod 777 ShellBot.sh >/dev/null 2>&1
     cd >/dev/null 2>&1
     #-----------------------------------------------------------------------------------------------------------------
@@ -222,12 +222,12 @@ elif [[ "$resposta" = '2' ]]; then
     sleep 3s
     echo "/bin/menu" >/bin/h && chmod +x /bin/h >/dev/null 2>&1
     rm versao* >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/MEGALODON-SSH/MEGA/main/Install/versao >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Install/versao >/dev/null 2>&1
     >/dev/null 2>&1
     cd /bin/ >/dev/null 2>&1
     rm v2raymanager >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Modulos/v2raymanager >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Modulos/botteste.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/v2raymanager >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/botteste.sh >/dev/null 2>&1
     chmod 777 v2raymanager >/dev/null 2>&1
     chmod 777 botteste.sh >/dev/null 2>&1
     mkdir $HOME/BOT >/dev/null 2>&1
