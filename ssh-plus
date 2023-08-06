@@ -2,7 +2,7 @@
 clear
 #--------------------------
 # SCRIPt SSH-PLUS
-# CANAL TELEGRAM: @TURBONETVPN2023
+# CANAL TELEGRAM: @WNET
 #--------------------------
 
 # - Cores
@@ -60,4 +60,4 @@ sysctl -p -f /etc/sysctl.d/70-disable-ipv6.conf
 
 # - Execulta instalador
 [[ -e Plus ]] && rm Plus
-wget raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
+wget raw.githubusercontent.com/wnetx9/SSHPLUS/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
