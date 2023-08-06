@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # encoding: utf-8
-# SSHPLUS By @SSH-PLUS
+# SSHPLUS By @WNET
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
