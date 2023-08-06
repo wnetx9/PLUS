@@ -207,8 +207,8 @@ chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
 mkdir /etc/rec > /dev/null 2>&1
-echo -e 'By: @@KIRITO_SSH' > /etc/rec/licence
-echo -e 'By: @@KIRITO_SSH' > /usr/lib/licence
+echo -e 'By: @@WNET' > /etc/rec/licence
+echo -e 'By: @@WNET' > /usr/lib/licence
 mkdir /usr/lib/checkuser > /dev/null 2>&1
 cd /usr/lib/checkuser || exit
 rm checkuser.py > /dev/null 2>&1
@@ -233,7 +233,7 @@ chmod 777 checkuser.py > /dev/null 2>&1
     echo 'echo -e ""' >>/root/.bashrc
     date=$(date '+%Y-%m-%d <> %H:%M:%S')
     echo -e "\033[1;37m $system                          $date"
-    figlet "SSH-PLUS" | lolcat
+    figlet "W NET" | lolcat
     echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                INSTALACAO CONCLUIDA               \033[1;33m \033[0m\033[01;31m║"
     echo -e "\033[01;31m║\033[1;33mPARA INICIAR DIGITE: \033[1;32mmenu\033[0m"
     echo -e "\033[01;31m║\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@WNET\033[0m"
