@@ -1,4 +1,4 @@
-# SSH-PLUS ⚡
+# W NET ⚡
 
 
 # TELEGRAM @WNET
@@ -35,18 +35,18 @@
 * Recomenda-se usar uma distro nova ou formatada
 * O idioma padrão é o Português
 
-# SSH PLUS 2023 INSTALAÇÃO
+# W NET 2023 INSTALAÇÃO
 
 # Como Instalar!
 
 # OPÇÃO 1
 ````
-apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ssh-plus)
+apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/wnetx9/SSHPLUS/main/ssh-plus)
 ````
 
 # OPÇÃO 2
 ```
-apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/script/arm64/Plus/ssh-plus)
+apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/wnetx9/SSHPLUS/main/script/arm64/Plus/ssh-plus)
 
 ```
 
