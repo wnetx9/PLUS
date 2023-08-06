@@ -1,6 +1,6 @@
 #!/bin/bash
 #====================================================
-#	@smigolvip
+#	@WNET
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
