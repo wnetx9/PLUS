@@ -117,7 +117,7 @@ echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ;
     echo ""
     [[ -f "$HOME/usuarios.db" ]] && {
         clear
-        figlet "PULSE NET - SSH" | lolcat
+        figlet "W NET" | lolcat
         echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━\033[0m"
         echo -e "\033[1;33mOPA DETECTAMOS..."
         echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━\033[0m"
@@ -201,8 +201,8 @@ chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
 mkdir /etc/rec > /dev/null 2>&1
-echo -e 'By: @KIRITO_SSH' > /etc/rec/licence
-echo -e 'By: @KIRITO_SSH' > /usr/lib/licence
+echo -e 'By: @WNET' > /etc/rec/licence
+echo -e 'By: @WNET' > /usr/lib/licence
 mkdir /usr/lib/checkuser > /dev/null 2>&1
 cd /usr/lib/checkuser || exit
 rm checkuser.py > /dev/null 2>&1
