@@ -43,7 +43,7 @@ echo "================================================"
 ;;
     2)
     install dos2unix -y /dev/null
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/badvpn/badvpn.sh /dev/null
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/badvpn/badvpn.sh /dev/null
     chmod 777 badvpn.sh
     ./badvpn.sh
 echo "================================================"

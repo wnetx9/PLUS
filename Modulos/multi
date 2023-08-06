@@ -10,7 +10,7 @@ SINCRONIZARPAINEL () {
       bash <(wget -qO- sshplus.xyz/scripts/utilitarios/syncpainel/inst)
 }
 SLOWDNS () {
-      wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/SlowDNS/install; chmod +x install; ./install
+      wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/SlowDNS/install; chmod +x install; ./install
 }
 PAINELV20 () {
     multi2
@@ -20,7 +20,7 @@ nome () {
 echo " $t " > /root/name
 }
 BOTFREE () {
-    wget https://raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/iniciar.sh -O iniciar.sh; chmod +x iniciar.sh; ./iniciar.sh
+    wget https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/iniciar.sh -O iniciar.sh; chmod +x iniciar.sh; ./iniciar.sh
 }
 ATTSSL () {
     apt install wget -y; wget --no-check-certificate https://www.dropbox.com/s/v2hvhv8z86zlsqd/ssl.sh; chmod +x ssl.sh; ./ssl.sh
