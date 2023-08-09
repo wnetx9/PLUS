@@ -42,10 +42,10 @@ fun_botOnOff() {
         echo -ne "\033[1;32mINFORME SEU ID:\033[1;37m "
         read iduser
         clear
-        echo -e "\033[1;32mINICIANDO BOT TURBONET-VPN \033[0m\n"
+        echo -e "\033[1;32mINICIANDO BOT W NET \033[0m\n"
         fun_bot1() {
         	[[ "$(grep -wc '16' /etc/issue.net)" != '0' ]] && {
-        		raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Modulos/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
+        		raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
         	}
             [[ ! -e "/etc/SSHPlus/ShellBot.sh" ]] && {
 				wget -qO- https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
@@ -65,12 +65,12 @@ fun_botOnOff() {
             cd $HOME
         }
         fun_bar 'fun_bot1'
-        [[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && echo -e "\n\033[1;32m BOT TURBONET-VPN !\033[0m" || echo -e "\n\033[1;31m ERRO! REANALISE SUAS INFORMACOES\033[0m"
+        [[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && echo -e "\n\033[1;32m BOT W NET !\033[0m" || echo -e "\n\033[1;31m ERRO! REANALISE SUAS INFORMACOES\033[0m"
         sleep 2
         menu
     } || {
         clear
-        echo -e "\033[1;32mPARANDO TURBONET-VPN... \033[0m\n"
+        echo -e "\033[1;32mPARANDO W NET... \033[0m\n"
         fun_bot2() {
             screen -r -S "bot_plus" -X quit
             screen -wipe 1>/dev/null 2>/dev/null
@@ -81,7 +81,7 @@ fun_botOnOff() {
             sleep 1
         }
         fun_bar 'fun_bot2'
-        echo -e "\n\033[1;32m \033[1;31mBOT TURBONET-VPN! \033[0m"
+        echo -e "\n\033[1;32m \033[1;31mBOT W NET \033[0m"
         sleep 2
         menu
     }
