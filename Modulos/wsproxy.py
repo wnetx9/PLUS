@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# WebSocket @wnetssh
+# WebSocket @scottssh
 import socket, threading, thread, select, signal, sys, time, getopt
 MSG = 'WebSocket'
 COR = '<font color="null">'
 FTAG = '</font>'
-MSx = '@wnetssh'
+MSx = '@scottssh'
 COx = '<font color="#00FFFF">'
 FTAx = '</font>'
 
