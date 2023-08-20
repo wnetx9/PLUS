@@ -1,6 +1,6 @@
 #!/bin/bash
 ####################################<
-### "BY ACKHTTP SERVER MANAGER >> @GODYSKYUP <<" ###
+### "BY ACKHTTP SERVER MANAGER >> @WNET <<" ###
 ####################################<
 user=$(whoami)
 if [ "$user" != "root" ]; then

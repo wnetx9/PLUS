@@ -4,8 +4,8 @@
 #   DATA ATT: 18 de JuL 2022
 #   DESENVOLVIDO POR: W NET
 #   API SHELLBOT: ORION
-#   CONTATO TELEGRAM: http://t.me/WNET
-#   CANAL TELEGRAM: http://t.me/WNET
+#   CONTATO TELEGRAM: http://t.me/wnet
+#   CANAL TELEGRAM: http://t.me/wnet
 #===================================================
 [[ ! -d /etc/SSHPlus ]] && exit 0
 [[ ! -d /etc/bot ]] && exit 0
@@ -74,7 +74,7 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
 env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>         BOT W NET </b>\n"
+        env_msg+="<b>         BOT W NET</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
@@ -110,7 +110,7 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
 env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>         BOT W NET</b>\n"
+        env_msg+="<b>         BOT  W NET</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
@@ -136,7 +136,7 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
 env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>         BOT W NET </b>\n"
+        env_msg+="<b>         BOT W NET</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
@@ -888,10 +888,10 @@ backup_users() {
 sobremim() {
     local msg
     env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>BOT W NET </b>\n"
+        env_msg+="<b>BOT W NET</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
     msg+="<b>Desenvolvido por:</b> @smigolvip\n"
-    msg+="<b>Canal Oficial:</b> @SSHPLUS\n\n"
+    msg+="<b>Canal Oficial:</b> @WNET\n\n"
     msg+="Fui criado com o propósito de fornecer informações e ferramentas para gestão VPN em servidores 🐧 GNU/Linux 🐧.\n\n"
     msg+="<b>Menu:</b> /menu\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
