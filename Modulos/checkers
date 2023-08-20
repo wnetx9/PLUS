@@ -29,10 +29,10 @@ case $x in
     initcheck
     ;;
 2 | 02)
-    bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/DTCheckUser/master/install.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/wnetx9/DTCheckUser/master/install.sh)
     ;;
 3 | 03)
-    bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/CheckUser/master/install.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/wnetx9/CheckUser/master/install.sh)
     ;;
 4 | 04)
     {
@@ -49,7 +49,7 @@ case $x in
     if check_installed; then
         chany  # Já instalado, executar o sistema chany
     else
-        bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/checkany/main/install.sh) && chany
+        bash <(curl -sL https://raw.githubusercontent.com/wnetx9/checkany/main/install.sh) && chany
     fi
     ;;
 0 | 00)
