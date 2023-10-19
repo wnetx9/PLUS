@@ -75,7 +75,7 @@ otimize_python() {
     #SETAR PYTHON3
     update-alternatives --set python3 /usr/bin/python3.6
 }
-figlet "SSH-PLUS" | lolcat
+figlet "W NET" | lolcat
 echo ""
 echo ""
 echo -e "                       \033[05;31mSISTEMAS \033[05;33mOPERACIONAIS\033[0m"
