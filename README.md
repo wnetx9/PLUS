@@ -41,7 +41,7 @@
 # ALTERAR SENHA ROOT VPS...
 
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/PhoenixxZ2023/senharoot/main/senharoot.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/wnetx9/senharoot/main/senharoot.sh)
 ```
 
 # W NET 2023 INSTALAÇÃO
@@ -61,7 +61,7 @@ apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubuserconte
 ### • Parte 1
 Use o comando abaixo para instalar/atualizar o bot e suas dependências⤵️
 ```bash
-sudo apt install curl -y; bash <(curl https://raw.githubusercontent.com/PhoenixxZ2023/WaBot-VendasSSH/main/install.sh)
+sudo apt install curl -y; bash <(curl https://raw.githubusercontent.com/wnetx9/WaBot-VendasSSH/main/install.sh)
 ```
 ### • Parte 2
 Use o comando abaixo para mudar a versão do nodejs⤵️
