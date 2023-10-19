@@ -13,7 +13,7 @@ banner='
 |___/____\___/ \_/\_/ |___/|_|\_|___/'
 
 echo -e "${CORTITLE}=====================================${SCOLOR}" 
-echo -e "${CORTITLE}       W NET CLIENTE SLOWDNS       ${SCOLOR}"
+echo -e "${CORTITLE}       SSHPLUS CLIENTE SLOWDNS       ${SCOLOR}"
 echo -e "${CORTITLE}=====================================${SCOLOR}" 
 echo -e "${RED}$banner${SCOLOR}"
 [[ ! -e dns ]] && {
