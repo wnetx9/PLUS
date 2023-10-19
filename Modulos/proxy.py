@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# WebSecurity by @wnetssh
+# Socks TURBONET
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
@@ -13,14 +13,11 @@ except:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
-MSG = 'WebSocket'
+MSG = ''
 COR = '<font color="null">'
 FTAG = '</font>'
-MSx = '@wnetssh'
-COx = '<font color="#00FFFF">'
-FTAx = '</font>'
 DEFAULT_HOST = '0.0.0.0:22'
-RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + " - (" + str(COx) + str(MSx) + str(FTAx) + "\r\n\r\n"
+RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
  
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -232,7 +229,7 @@ def main(host=IP, port=PORT):
     print "\033[0;34m━"*8,"\033[1;32m PROXY SOCKS","\033[0;34m━"*8,"\n"
     print "\033[1;33mIP:\033[1;32m " + IP
     print "\033[1;33mPORTA:\033[1;32m " + str(PORT) + "\n"
-    print "\033[0;34m━"*10,"\033[1;32m SSHPLUS","\033[0;34m━\033[1;37m"*11,"\n"
+    print "\033[0;34m━"*10,"\033[1;32m TURBONET2023","\033[0;34m━\033[1;37m"*11,"\n"
     server = Server(IP, PORT)
     server.start()
     while True:

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 check_installed() {
-    if [ -f "/usr/lib/checkany/checkany.py" ]; then
+    if [ -f "/usr/lib/checkgestor/checkgestor.py" ]; then
         return 0  # Já instalado
     else
         return 1  # Não instalado
@@ -13,9 +13,8 @@ echo -e "\033[46;1;37m              ★ MENU CHECKUSER ★               \033[0m
 echo -e "\033[01;31m\033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 01 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR CHECKUSER CONECTA4G \033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 02 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR CHECKUSER DTUNNEL VPN\033[0m"
-echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 03 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR CHECKUSER GL TUNNEL VPN\033[0m"
-echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 04 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR DTUNNEL PROXY\033[0m"
-echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 05 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR CHECKUSER ANYVPN MOD\033[0m"
+echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 03 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR PROXY DTUNNEL V2.0\033[0m"
+echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 04 •\033[1;34m]\033[1;37m ➤  \033[1;33mINSTALAR CHECKUSER ALL-APPS\033[0m"
 echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;37m ➤  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
 echo -e "\033[01;31m\033[0m"
 echo -e "\033[0;36m░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░\033[0m"
@@ -29,27 +28,22 @@ case $x in
     initcheck
     ;;
 2 | 02)
-    bash <(curl -sL https://raw.githubusercontent.com/wnetx9/DTCheckUser/master/install.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/DTCheckUser/master/install.sh)
     ;;
 3 | 03)
-    bash <(curl -sL https://raw.githubusercontent.com/wnetx9/CheckUser/master/install.sh)
-    ;;
-4 | 04)
     {
-    rm -f /usr/bin/proxy
-    curl -s -L -o /usr/bin/main https://github.com/wnetx9/DTunnelProxy/raw/main/main
-    curl -s -L -o /usr/bin/proxy https://github.com/wnetx9/DTunnelProxy/raw/main/proxy
-    chmod +x /usr/bin/main /usr/bin/proxy
-    clear && echo -e "\033[1;31mExecute: \033[1;32mmain033[0m" && main
+    curl -s -o install.sh -L https://raw.githubusercontent.com/PhoenixxZ2023/proxy/main/install.sh
+    chmod +x install.sh
+    ./install.sh && mainproxy
     echo ""
-    echo "VELOCIDADE SUPREMA ATIVADA"
+    echo "SUPER PROXY ATIVADO"
     }
     ;;
-5 | 05)
+4 | 4)
     if check_installed; then
-        chany  # Já instalado, executar o sistema chany
+        chall  # Já instalado, executar o sistema chall.sh
     else
-        bash <(curl -sL https://raw.githubusercontent.com/wnetx9/checkany/main/install.sh) && chany
+        bash <(curl -sL https://raw.githubusercontent.com/wnetx9/checkUser2024/main/instcheck.sh) && chall.sh && chall
     fi
     ;;
 0 | 00)
