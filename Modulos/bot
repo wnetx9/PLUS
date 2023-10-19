@@ -2,7 +2,7 @@
 #===================================================
 #   SCRIPT: BOT W NET
 #   DATA ATT: 18 de JuL 2022
-#   DESENVOLVIDO POR: WNET
+#   DESENVOLVIDO POR: W NET
 #   API SHELLBOT: ORION
 #   CONTATO TELEGRAM: http://t.me/WNET
 #   CANAL TELEGRAM: http://t.me/WNET
@@ -49,7 +49,7 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
 env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT SSHPLUS</b>\n"
+        env_msg+="<b>        BOT W NET</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
         env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -891,7 +891,7 @@ sobremim() {
         env_msg+="<b>BOT SSH PLUS</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
     msg+="<b>Desenvolvido por:</b> @smigolvip\n"
-    msg+="<b>Canal Oficial:</b> @SSHPLUS\n\n"
+    msg+="<b>Canal Oficial:</b> @WNET\n\n"
     msg+="Fui criado com o propósito de fornecer informações e ferramentas para gestão VPN em servidores 🐧 GNU/Linux 🐧.\n\n"
     msg+="<b>Menu:</b> /menu\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \

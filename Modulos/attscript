@@ -62,7 +62,7 @@ fun_atts () {
 
   [[ -e /tmp/att ]] && rm /tmp/att
 
-	wget -c -P /home wget -y; bash <(wget -qO- raw.githubusercontent.com/wnetx9/SSHPLUS/main/Install/versao)
+	wget -c -P /home wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/Install/versao)
 
 	[[ -f "/home/versao" ]] && mv /home/versao /tmp/att
 
@@ -72,7 +72,7 @@ fun_atts () {
 
 echo -e "                              \033[1;31mBy SSH-PLUS\033[1;36m"
 
-echo -e "   W NET" | figlet
+echo -e "   SSH-PLUS" | figlet
 
 echo " "
 
@@ -132,7 +132,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     sleep 3
 
-    wget -y; bash <(wget -qO- raw.githubusercontent.com/wnetx9/SSHPLUS/main/ssh-plus) > /dev/null 2>&1
+    wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ssh-plus) > /dev/null 2>&1
 
     chmod +x Plus
 

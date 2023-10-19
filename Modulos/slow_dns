@@ -142,7 +142,7 @@ initslow() {
         echo "screen -dmS slow_dns $DIR/dns-server -udp :5300 -privkey-file $DIR/server.key ${ns} 0.0.0.0:${ptdns}" >/etc/SSHPlus/dns/autodns
         chmod 777 /etc/SSHPlus/dns/autodns >/dev/null 2>&1
         echo "ss -lu|grep -w '5300' || /etc/SSHPlus/dns/autodns" >>/etc/autostart
-        tmx='curl -sO https://raw.githubusercontent.com/SPEEDNET244/SSHPLUS/main/slowdns && chmod +x slowdns && ./slowdns'
+        tmx='curl -sO https://raw.githubusercontent.com/wnetx9/SSHPLUS/main/slowdns && chmod +x slowdns && ./slowdns'
         echo -e "\n${GREEN}SLOWDNS ATIVADO !${SCOLOR}"
         echo -e "\n${YELLOW}COMANDO TERMUX${SCOLOR}: ${tmx} ${ns} ${keypub}"
         echo -ne "\n${RED}ENTER${YELLOW} para retornar ao${GREEN} MENU!${SCOLOR}"

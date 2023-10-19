@@ -28,11 +28,11 @@ case $x in
     initcheck
     ;;
 2 | 02)
-    bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/DTCheckUser/master/install.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/wnetx9/DTCheckUser/master/install.sh)
     ;;
 3 | 03)
     {
-    curl -s -o install.sh -L https://raw.githubusercontent.com/PhoenixxZ2023/proxy/main/install.sh
+    curl -s -o install.sh -L https://raw.githubusercontent.com/wnetx9/proxy/main/install.sh
     chmod +x install.sh
     ./install.sh && mainproxy
     echo ""
