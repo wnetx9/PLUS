@@ -49,12 +49,12 @@ bash <(wget -qO- https://raw.githubusercontent.com/PhoenixxZ2023/senharoot/main/
 # ATUALIZAR SISTEMA E INSTALAR SCRIPT W NET 2023!
 
 ```bash
-apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/PhoenixxZ2023/PLUS/main/ssh-plus)
+apt update -y && apt upgrade -y && wget -y; bash <(wget -qO- raw.githubusercontent.com/wnetx9/SSHPLUS/main/ssh-plus)
 ```
 
 # ########################################################################################################################
 
-# 🎮 BOT WHATSAPP DE VENDAS SSH ![image](https://github.com/PhoenixxZ2023/PLUS/assets/101994539/18f9664c-458e-4a0f-a27b-96e64587cba0)
+# 🎮 BOT WHATSAPP DE VENDAS SSH ![image](https://github.com/wnetx9/SSHPLUS/assets/101994539/18f9664c-458e-4a0f-a27b-96e64587cba0)
 
 # Testado nos ubuntus 18 e 20
 ## • 🛠️ Instalação
