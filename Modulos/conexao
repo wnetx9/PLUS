@@ -1632,7 +1632,7 @@ exit 0' >$RCLOCAL
 elif [[ "$resposta" = '3' ]]; then
 		clear
 		if ps x | grep -w WebSocket | grep -v grep 1>/dev/null 2>/dev/null; then
-		figlet 'SSH-PLUS' | lolcat
+		figlet 'W NET' | lolcat
 		echo -e "\E[41;1;37m       🚀   WEBSOCKET SECURITY   🚀           \E[0m"
 				echo ""
 				fun_wsswsocksoff() { 
@@ -1654,7 +1654,7 @@ elif [[ "$resposta" = '3' ]]; then
 				
 				fun_socks
 			else
-			figlet 'SSH-PLUS' | lolcat
+			figlet 'W NET' | lolcat
 		echo -e "\E[44;1;37m       🚀   WEBSOCKET SECURITY   🚀           \E[0m"
 				echo ""
 				rm -rf /etc/mamalista
@@ -2130,7 +2130,7 @@ elif [[ "$resposta" = '3' ]]; then
 		while true $x != "ok"; do
 			[[ ! -e '/home/sshplus' ]] && exit 0
 			clear
-			figlet 'SSH-PLUS' | lolcat
+			figlet 'W NET' | lolcat
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                $date"
