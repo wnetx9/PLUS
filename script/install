@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 #--------------------------
-# SCRIPT W NET
+# SCRIPT SSH-PLUS
 # CANAL TELEGRAM: @WNET
 #--------------------------
 
@@ -60,4 +60,4 @@ sysctl -p -f /etc/sysctl.d/70-disable-ipv6.conf
 
 # - Execulta instalador
 [[ -e Plus ]] && rm Plus
-wget raw.githubusercontent.com/wnetx9/SSHPLUS/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
+wget raw.githubusercontent.com/wnetx9/SSHPLUS/main/script/64/Plus && chmod 777 Plus && ./Plus
