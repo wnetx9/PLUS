@@ -1,6 +1,6 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: W NET
+#	SCRIPT: SSH PLUS
 #	DESENVOLVIDO POR:	W NET
 #	CANAL TELEGRAM:	http://t.me/WNET
 #====================================================
@@ -35,14 +35,14 @@ fun_bar() {
 fun_botOnOff() {
     [[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) = '0' ]] && {
         clear
-        echo -e "\E[44;1;37m             INSTALADOR BOT W NET                \E[0m\n"
+        echo -e "\E[44;1;37m             INSTALADOR BOT TURBONET-VPN                \E[0m\n"
         echo -ne "\033[1;32mINFORME SEU TOKEN:\033[1;37m "
         read tokenbot
         echo ""
         echo -ne "\033[1;32mINFORME SEU ID:\033[1;37m "
         read iduser
         clear
-        echo -e "\033[1;32mINICIANDO BOT W NET \033[0m\n"
+        echo -e "\033[1;32mINICIANDO BOT TURBONET-VPN \033[0m\n"
         fun_bot1() {
         	[[ "$(grep -wc '16' /etc/issue.net)" != '0' ]] && {
         		raw.githubusercontent.com/wnetx9/SSHPLUS/main/Modulos/ShellBot.sh > /etc/SSHPlus/ShellBot.sh

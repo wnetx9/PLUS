@@ -1,6 +1,6 @@
 #!/bin/bash
 #===================================================
-#   SCRIPT: BOT W NET
+#   SCRIPT: BOT SSH PLUS
 #   DATA ATT: 18 de JuL 2022
 #   DESENVOLVIDO POR: W NET
 #   API SHELLBOT: ORION
@@ -22,9 +22,9 @@ ShellBot.username
 fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
-env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT W NET</b>\n"
-        env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
+env_msg="╔══════════•⊱✦⊰•══════════╗\n"
+        env_msg+="<b>              BOT-SSHPLUS PRO</b>\n"
+        env_msg+="╚══════════•⊱✦⊰•══════════╝\n\n"
         env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -38,9 +38,9 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
     }
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
-env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT W NET</b>\n"
-        env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
+env_msg="╔════════•⊱✦⊰•════════╗\n"
+        env_msg+="<b>          BOT SSHPLUS PRO</b>\n"
+        env_msg+="╚════════•⊱✦⊰•════════╝\n\n"
         env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard2" \
@@ -49,7 +49,7 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
 env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT W NET</b>\n"
+        env_msg+="<b>        BOT SSHPLUS PRO</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
         env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -73,9 +73,9 @@ fun_ajuda() {
     }
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
-env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT W NET</b>\n"
-        env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
+env_msg="╔═════════•⊱✦⊰•═════════╗\n"
+        env_msg+="<b>            BOT SSHPLUS PRO</b>\n"
+        env_msg+="╚═════════•⊱✦⊰•═════════╝\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
         env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
@@ -109,9 +109,9 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
-env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT W NET</b>\n"
-        env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
+env_msg="╔════════•⊱✦⊰•════════╗\n"
+        env_msg+="<b>            BOT SSHPLUS PRO</b>\n"
+        env_msg+="╚════════•⊱✦⊰•════════╝\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
         env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
@@ -135,9 +135,9 @@ env_msg="╔═══════•⊱✦⊰•═══════╗\n"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
-env_msg="╔═══════•⊱✦⊰•═══════╗\n"
-        env_msg+="<b>        BOT W NET</b>\n"
-        env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
+env_msg="╔════════•⊱✦⊰•════════╗\n"
+        env_msg+="<b>              BOT SSHPLUS PRO</b>\n"
+        env_msg+="╚════════•⊱✦⊰•════════╝\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
         env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
@@ -891,7 +891,7 @@ sobremim() {
         env_msg+="<b>BOT SSH PLUS</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
     msg+="<b>Desenvolvido por:</b> @smigolvip\n"
-    msg+="<b>Canal Oficial:</b> @WNET\n\n"
+    msg+="<b>Canal Oficial:</b> @SSHPLUS\n\n"
     msg+="Fui criado com o propósito de fornecer informações e ferramentas para gestão VPN em servidores 🐧 GNU/Linux 🐧.\n\n"
     msg+="<b>Menu:</b> /menu\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \

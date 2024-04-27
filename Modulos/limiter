@@ -1,9 +1,9 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: LIMITER W NET MANAGER
-#	DESENVOLVIDO POR:	W NET
-#	CONTATO TELEGRAM:	http://t.me/WNET
-#	CANAL TELEGRAM:	http://t.me/WNET
+#	SCRIPT: LIMITER SSHPLUS MANAGER
+#	DESENVOLVIDO POR:	CRAZY_VPN
+#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
+#	CANAL TELEGRAM:	http://t.me/sshplus
 #====================================================
 clear
 system=$(cat /etc/issue.net)
